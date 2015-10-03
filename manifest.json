@@ -3,6 +3,7 @@
   "name": "Chemo Bull Shit",
   "description": "This extension will help you to filter out pages that contain Spam, Outdated and Bad Information related to Medical/Health Problems.",
   "version": "0.1.0",
+  "options_page": "options.html",
   "background": {
     "scripts": [
       "jquery-1.11.3.min.js",
@@ -23,6 +24,8 @@
   "permissions": [
    "tabs",
    "<all_urls>",
-   "background"
+   "background",
+   "notifications",
+   "storage"
    ]
 }
