@@ -4,7 +4,7 @@ function save_options() {
   var shoudlOpenYouTube = document.getElementById('youtube').checked;
   chrome.storage.sync.set({
     shouldKillTabsAuto: shouldKillTabsAuto,
-    shoudlOpenYouTube: shouldOpenYouTube
+    shoudlOpenYouTube: shoudlOpenYouTube
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -21,10 +21,10 @@ function restore_options() {
   // Use default value color = 'red' and shouldKillTabsAuto = true.
   chrome.storage.sync.get({
     shouldKillTabsAuto: false,
-    shouldOpenYouTube: false
+    shoudlOpenYouTube: false
   }, function(items) {
     document.getElementById('kill').checked = items.shouldKillTabsAuto;
-    document.getElementById('youtube').checked = items.shouldOpenYouTube;
+    document.getElementById('youtube').checked = items.shoudlOpenYouTube;
 
   });
 }
